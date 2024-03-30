@@ -1,0 +1,35 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss";
+
+body {
+  background-color: var.$LightBlue;
+
+  @include mixins.media(small) {
+    background-color: var.$White;
+  }
+
+  button,
+  p,
+  a,
+  span,
+  input {
+    font-size: 1.6rem;
+  }
+  button {
+    cursor: pointer;
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  @include mixins.media(small) {
+    margin: 2rem;
+    height: calc(100vh - 4rem);
+    width: calc(100vw - 4rem);
+    display: flex;
+  }
+}

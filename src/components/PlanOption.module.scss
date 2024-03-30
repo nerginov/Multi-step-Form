@@ -1,0 +1,43 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+.plan-option.selected {
+  border-color: var.$PurplishBlue;
+  background-color: var.$Alabaster;
+}
+.plan-option {
+  &:active {
+    transform: scale(0.98);
+  }
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid var.$CoolGray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  @include mixins.media(small) {
+    padding: 2rem 0rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  img {
+    margin-right: 2rem;
+  }
+
+  p {
+    color: var.$MarineBlue;
+    font-weight: 500;
+
+    span {
+      color: var.$CoolGray;
+      font-size: 1.4rem;
+    }
+    .plan-bonus {
+      color: var.$MarineBlue;
+      font-size: 1.2rem;
+    }
+  }
+}

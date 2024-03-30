@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Multi-Step Form Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Multi-Step Form is a React-based web application that offers a seamless user experience for collecting user information and choices across multiple steps.
 
-## Available Scripts
+## Screenshot
 
-In the project directory, you can run:
+![App Screenshot](src/assets/webpage-screenshot.png)
 
-### `npm start`
+## Live Site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Multi-Step Form Live Site](live-site-link)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+### Dynamic Form Progression
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application guides users through a series of steps, dynamically updating the form based on user input. This ensures a smooth and intuitive experience as users progress through each step.
 
-### `npm run build`
+### User Validation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Validation is implemented at each step to ensure the accuracy and completeness of user-provided information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Flexible Billing Options
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Users are provided with flexible billing options, including both monthly and yearly plans. The application seamlessly switches between billing frequencies based on user preferences, demonstrating dynamic content rendering.
 
-### `npm run eject`
+### Addon Selection
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Users have the option to select additional features or addons to enhance their chosen plan. This feature showcases the application's ability to manage complex user choices and preferences across multiple steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React**: Used for building a responsive and interactive user interface, showcasing proficiency in front-end development with React.
+- **HTML5 & CSS3 with SASS**: Utilized for structuring web pages and styling the application's user interface. Demonstrates expertise in modern web development techniques for creating visually appealing designs.
+- **JavaScript (ES6)**: Implemented for interactivity and dynamic behavior, including form validation and navigation. Highlights proficiency in modern JavaScript programming and ES6 features.
+- **React Context API**: Utilized for managing user choices and state across multiple components, demonstrating proficiency in state management with React.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Frontend Mentor**: Provided design assets and challenges for practicing front-end development skills.

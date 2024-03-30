@@ -1,0 +1,85 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.addons {
+  label {
+  }
+  ul {
+    li:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+
+      @include mixins.media(small) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    li {
+      list-style: none;
+      div.selected {
+        border-color: var.$PurplishBlue;
+        background-color: var.$Alabaster;
+      }
+      div {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid var.$CoolGray;
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        @include mixins.media(small) {
+          padding: 2rem;
+        }
+
+        input {
+          position: relative;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1rem;
+          color: var.$White;
+          border: 0.5px solid var.$CoolGray;
+          border-radius: 0.5rem;
+
+          &:checked {
+            background-color: var.$PurplishBlue;
+
+            &::after {
+              // Checkmark
+              content: "";
+              display: block;
+              position: absolute;
+              top: 45%;
+              left: 50%;
+              width: 0.6rem;
+              height: 0.9rem;
+              border: solid var.$White;
+              border-width: 0 2px 2px 0;
+              transform: translate(-50%, -50%) rotate(45deg);
+            }
+          }
+        }
+
+        p {
+          color: var.$MarineBlue;
+          font-weight: 500;
+
+          span {
+            color: var.$CoolGray;
+            font-size: 1.2rem;
+          }
+        }
+
+        .pricing {
+          position: absolute;
+          right: 1rem;
+          font-size: 1.2rem;
+          color: var.$PurplishBlue;
+        }
+      }
+    }
+  }
+}

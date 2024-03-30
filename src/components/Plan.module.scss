@@ -1,0 +1,24 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.select-plan {
+  ul {
+    @include mixins.media(small) {
+      display: flex;
+      gap: 4rem;
+    }
+
+    li:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+
+      @include mixins.media(small) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    li {
+      list-style: none;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.navigation {
+  z-index: 10;
+  padding: 2rem;
+  position: absolute;
+  background-color: var.$White;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  // justify-content: space-between;
+
+  &__button {
+    appearance: none;
+    background: none;
+    border: none;
+
+    &--back {
+      &:hover {
+        color: var.$MarineBlue;
+      }
+      margin-right: auto;
+      left: 0;
+      color: var.$CoolGray;
+    }
+
+    &--next {
+      margin-left: auto;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      background: var.$MarineBlue;
+      color: var.$White;
+    }
+
+    &--confirm {
+      margin-left: auto;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      background: var.$PurplishBlue;
+      color: var.$White;
+    }
+    &--next:hover,
+    &--confirm:hover {
+      opacity: 0.9;
+    }
+  }
+}

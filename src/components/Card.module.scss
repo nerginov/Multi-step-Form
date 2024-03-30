@@ -1,0 +1,40 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.card {
+  top: -8rem;
+  position: relative;
+  background: var.$White;
+  border-radius: 1rem;
+  margin-inline: 1rem;
+  padding: 3rem 2rem;
+
+  @include mixins.media(tablet) {
+    margin-inline: 10rem;
+  }
+
+  @include mixins.media(small) {
+    margin-inline: 10%;
+    top: 0;
+    margin-top: 2rem;
+    width: 50%;
+  }
+
+  header {
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: var.$MarineBlue;
+    }
+
+    p {
+      color: var.$CoolGray;
+      margin-bottom: 2rem;
+
+      @include mixins.media(small) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

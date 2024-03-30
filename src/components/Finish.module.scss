@@ -1,0 +1,57 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.finish {
+  &__summary {
+    padding: 1rem;
+    background-color: var.$Alabaster;
+
+    &__plan {
+      color: var.$MarineBlue;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 0.5px solid var.$CoolGray;
+      font-weight: 500;
+
+      @include mixins.media(small) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    &__addon {
+      display: flex;
+      justify-content: space-between;
+      color: var.$CoolGray;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+
+        @include mixins.media(small) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  &__total {
+    color: var.$CoolGray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 2rem;
+
+    span {
+      vertical-align: middle;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var.$PurplishBlue;
+    }
+
+    @include mixins.media(small) {
+      margin-top: 3rem;
+    }
+  }
+}

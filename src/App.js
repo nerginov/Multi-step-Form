@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import Steps from "./components/Steps";
+import Personalinfo from "./components/Personalinfo";
+import Plan from "./components/Plan";
+import Addons from "./components/Addons";
+import Finish from "./components/Finish";
+import { useState } from "react";
+import { UserChoicesProvider } from "./components/UserChoicesContext";
 
 function App() {
+  //Keep track of the current step to display
+  const [step, setStep] = useState(1);
+
+  //Handle navigation forward and back
+  const handleNextStep = () => {
+    setStep((prevStep) => prevStep + 1);
+  };
+
+  const handleBackStep = () => {
+    setStep((prevStep) => prevStep - 1);
+  };
+
+  //Rendering components based on the current step
+  const renderComponent = () => {
+    switch (step) {
+      case 1:
+        return <Personalinfo nextStep={handleNextStep} step={step} />;
+      case 2:
+        return (
+          <Plan
+            nextStep={handleNextStep}
+            prevStep={handleBackStep}
+            step={step}
+          />
+        );
+      case 3:
+        return (
+          <Addons
+            nextStep={handleNextStep}
+            prevStep={handleBackStep}
+            step={step}
+          />
+        );
+      case 4:
+        return (
+          <Finish prevStep={handleBackStep} step={step} setStep={setStep} />
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserChoicesProvider>
+      <div className={styles.app}>
+        <Steps currentStep={step} />
+        {renderComponent()}
+      </div>
+    </UserChoicesProvider>
   );
 }
 

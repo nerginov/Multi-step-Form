@@ -1,0 +1,50 @@
+@use "../variables.scss" as var;
+@use "../mixins.scss";
+
+.personal-info {
+  form {
+    display: flex;
+    flex-direction: column;
+    div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      &:not(:last-of-type) {
+        margin-bottom: 1.5rem;
+
+        @include mixins.media(small) {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    input {
+      border: 1px solid var.$CoolGray;
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+      @include mixins.media(small) {
+        padding: 2rem 1rem;
+      }
+
+      &::placeholder {
+        color: var.$CoolGray;
+      }
+    }
+  }
+  .error {
+    border-color: var.$StrawberryRed;
+  }
+  .error-msg {
+    color: var.$StrawberryRed;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+  }
+}
